@@ -14,7 +14,7 @@ def getcurrenttime():
 def getcurrentpopulation():
     return "30"
 def writetofile(time,population):
-    f = open("real_time_cateen.csv","w")
+    f = open("real_time_canteen.csv","w")
     f.write("time,catten\n")
     f.write(time+","+population+"\n")
     return
