@@ -1,5 +1,7 @@
 import time
 import random
+import datemtime
+nowTime=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 random_list = [random.randint(0,200) for i in range (1)]
 for a in random_list:
     print (a)
@@ -10,13 +12,13 @@ for a in random_list:
         #print(a)
 
 def getcurrenttime():
-    return "2018/8/29 14:24:00"
+    return nowTime
 def getcurrentpopulation():
-    return "30"
+    return random.randint(0,200)
 def writetofile(time,population):
     f = open("real_time_canteen.csv","w")
     f.write("time,canteen\n")
-    f.write(time+","+population+"\n")
+    f.write(str(time)+","+str(population)+"\n")
     return
 
 while True:
